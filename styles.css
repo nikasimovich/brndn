@@ -1,0 +1,95 @@
+@font-face {
+    font-family: '10mal12Lampen';
+    src: url('assets/10mal12Lampen.woff2') format('woff2'),
+        url('assets/10mal12Lampen.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ABCM';
+    src: url('assets/ABCMaristVariable-Trial.woff2') format('woff2'),
+        url('assets/ABCMaristVariable-Trial.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ABCMI';
+    src: url('assets/ABCMaristVariableItalic-Trial.woff2') format('woff2'),
+        url('assets/ABCMaristVariableItalic-Trial.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GraphicCAT';
+    src: url('assets/GraphicCAT.woff2') format('woff2'),
+        url('assets/GraphicCAT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+/*  background-color: #000AFF;
+  color: white;*/
+  color: #000AFF;
+  padding:0 50px 50px 50px;
+  margin:0;
+  font-size:30px;
+  font-family: "ABCM";
+  font-weight: normal;
+  line-height:1.25;
+}
+
+.author {
+  font-size:27px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+
+h1 {
+  font-family: '10mal12Lampen';
+  text-transform:uppercase;
+  font-weight: normal;
+  font-size: 29vh;
+  letter-spacing: 2px;
+  line-height:1;
+  text-align:center;
+}
+
+::selection {
+    background: #F65800; /* Background color for selected text */
+    color: white; /* Text color for selected text */
+}
+
+::-moz-selection {
+    background: #F65800; /* Background color for selected text in Firefox */
+    color: white; /* Text color for selected text in Firefox */
+}
+
+.grid-item {
+      margin-bottom: 50px;
+      max-width: 800px;
+/*      border-bottom: 10px dotted;*/
+}
+
+.grid-container {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+#header-text {
+  margin-top:0;
+}
