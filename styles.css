@@ -41,14 +41,15 @@ body {
   color: #000AFF;
   padding:0 50px 50px 50px;
   margin:0;
-  font-size:30px;
+  font-size:29px;
   font-family: "ABCM";
   font-weight: normal;
   line-height:1.25;
+  border: 9px solid;
 }
 
 .author {
-  font-size:27px;
+  font-size:26px;
   text-transform:uppercase;
   letter-spacing:1px;
 }
@@ -62,7 +63,7 @@ h1 {
   font-family: '10mal12Lampen';
   text-transform:uppercase;
   font-weight: normal;
-  font-size: 29vh;
+  font-size: 28vh;
   letter-spacing: 2px;
   line-height:1;
   text-align:center;
