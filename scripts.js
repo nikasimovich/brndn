@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
             word.split('').forEach(letter => {
                 const letterSpan = document.createElement('span');
                 letterSpan.innerText = letter;
-                const randomOffset = Math.floor(Math.random() * 100) - 50; // Random offset between -60 and 60 pixels
+                const randomOffset = Math.floor(Math.random() * 120) - 60; // Random offset between -60 and 60 pixels
                 letterSpan.style.display = 'inline-block';
                 letterSpan.style.position = 'relative';
                 letterSpan.style.top = `${randomOffset}px`;
@@ -80,4 +80,27 @@ document.addEventListener("DOMContentLoaded", function() {
     // Apply text effect to header and footer
     applyTextEffect('header-text');
     applyTextEffect('footer-text');
+
+    // Function to update time
+    function updateTime() {
+        const californiaTimeElement = document.getElementById('california-time');
+        const nycTimeElement = document.getElementById('nyc-time');
+
+        if (californiaTimeElement && nycTimeElement) {
+            const now = new Date();
+            const options = { hour: '2-digit', minute: '2-digit', hour12: false };
+
+            const californiaTime = now.toLocaleTimeString('en-US', { ...options, timeZone: 'America/Los_Angeles' });
+            const nycTime = now.toLocaleTimeString('en-US', { ...options, timeZone: 'America/New_York' });
+
+            californiaTimeElement.innerText = `CA ${californiaTime}`;
+            nycTimeElement.innerText = `NYC ${nycTime}`;
+        }
+    }
+
+    // Initial time update
+    updateTime();
+
+    // Update time every second
+    setInterval(updateTime, 1000);
 });
