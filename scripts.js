@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const californiaTime = now.toLocaleTimeString('en-US', { ...options, timeZone: 'America/Los_Angeles' });
             const nycTime = now.toLocaleTimeString('en-US', { ...options, timeZone: 'America/New_York' });
 
-            californiaTimeElement.innerText = `CA ${californiaTime}`;
+            californiaTimeElement.innerText = `LA ${californiaTime}`;
             nycTimeElement.innerText = `NYC ${nycTime}`;
         }
     }
