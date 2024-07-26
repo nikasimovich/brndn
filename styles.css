@@ -41,19 +41,19 @@ body {
   color: #000AFF;
   padding:0 50px 50px 50px;
   margin:0;
-  font-size:27px;
+  font-size:25px;
   font-family: "ABCM";
   font-weight: normal;
   line-height:1.25;
-  border: 9px solid;
+  border: 8px solid;
 }
 
 p {
-    margin-bottom:0;
+    margin-bottom:-5px;
 }
 
 .author {
-  font-size:26px;
+  font-size:24px;
   text-transform:uppercase;
   letter-spacing:1px;
 }
