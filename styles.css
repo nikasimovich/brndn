@@ -79,7 +79,7 @@ body {
 /*  background-color: #000AFF;
   color: white;*/
   color: #000AFF;
-  padding:0 50px 50px 50px;
+  padding: 0;
   margin:0;
   font-size:25px;
   font-family: "ABCM";
@@ -103,12 +103,13 @@ span.small {
 }
 
 canvas {
-    max-width: 100%;
+    max-width: 102%;
 }
 
 
 footer {
     margin-top:100px;
+    margin-bottom: -9px;
 }
 
 #footer-text {
@@ -149,6 +150,10 @@ h1 {
 
 #header-text {
   margin-top:50px;
+}
+
+main {
+    padding: 0 50px;
 }
 
 #sticky-header {
