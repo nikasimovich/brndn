@@ -67,6 +67,14 @@ canvas {
 }
 
 
+footer {
+    margin-top:100px;
+}
+
+#footer-text {
+    margin: 0;
+}
+
 h1 {
   font-family: '10mal12Lampen';
   text-transform:uppercase;
