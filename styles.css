@@ -172,9 +172,13 @@ main {
     top: 0;
     background-color: #fff;
     justify-content: space-between;
-/*    padding: 10px 20px;*/
+/*    margin: 20px;*/  
     display: flex;
     z-index: 1000;
     width: 100%;
     margin-bottom:50px;
+}
+
+#sticky-header span {
+    padding:0 20px;
 }
