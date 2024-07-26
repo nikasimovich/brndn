@@ -50,40 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Use the function with an example image
     createHalftone('assets/grad-bw.jpg');
 
-    // Text effect function
-    function applyTextEffect(elementId) {
-        const element = document.getElementById(elementId);
-        const words = element.innerText.split(' ');
-        element.innerText = '';
-
-        words.forEach(word => {
-            const wordSpan = document.createElement('span');
-            word.split('').forEach(letter => {
-                const letterSpan = document.createElement('span');
-                letterSpan.innerText = letter;
-                const randomOffset = Math.floor(Math.random() * 80) - 40; // Random offset between -40 and 40 pixels
-                letterSpan.style.display = 'inline-block';
-                letterSpan.style.position = 'relative';
-                letterSpan.style.top = `${randomOffset}px`;
-                wordSpan.appendChild(letterSpan);
-            });
-            const spaceSpan = document.createElement('span');
-            spaceSpan.innerText = ' ';
-            wordSpan.appendChild(spaceSpan);
-
-            element.appendChild(wordSpan);
-            const lineBreak = document.createElement('br');
-            element.appendChild(lineBreak);
-        });
-    }
-
-    // Check if the screen width is greater than 600px
-    if (window.innerWidth > 600) {
-        // Apply text effect to header and footer if screen width is greater than 600px
-        applyTextEffect('header-text');
-        applyTextEffect('footer-text');
-    }
-
     // Function to update time
     function updateTime() {
         const californiaTimeElement = document.getElementById('california-time');
@@ -106,4 +72,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Update time every second
     setInterval(updateTime, 1000);
+
+// header animation
+ const headerText = document.getElementById('header-text');
+    let animationFrameId;
+
+    // Function to animate the header text
+    function animateHeaderText() {
+        // Start from initial transform state
+        headerText.style.transform = 'scale(0.5) rotate(-25deg)';
+        headerText.style.transition = 'none';
+
+        // Allow time for the style to apply before starting the transition
+        setTimeout(() => {
+            // Use requestAnimationFrame for smoothness
+            animationFrameId = requestAnimationFrame(() => {
+                headerText.style.transition = 'transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+                headerText.style.transform = 'scale(1.1) rotate(-25deg)';
+
+                // Reset the transform after the animation completes
+                setTimeout(() => {
+                    headerText.style.transform = 'scale(1) rotate(-25deg)';
+                }, 1000); // Duration of the animation
+            });
+        }, 100); // Short delay to ensure initial state is set
+    }
+
+    // Initial animation on page load
+    animateHeaderText();
+
+
+    // Clear animation frame if necessary
+    headerText.addEventListener('mouseleave', () => {
+        if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+        }
+    });
 });
