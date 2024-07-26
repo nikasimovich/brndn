@@ -86,7 +86,9 @@ body {
   font-weight: normal;
   line-height:1.25;
   border: 9px solid;
+  overflow-x: hidden;
 }
+
 
 p {
     margin-bottom:-5px;
