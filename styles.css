@@ -162,6 +162,13 @@ main {
     line-height:1.2;
   }
 
+  header {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+
   #sticky-header {
     border-bottom:9px solid;
   }
