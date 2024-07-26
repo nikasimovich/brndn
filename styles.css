@@ -25,7 +25,6 @@
     font-display: swap;
 }
 
-
 @font-face {
     font-family: 'Herkules';
     src: url('assets/Herkules.woff2') format('woff2'),
@@ -44,9 +43,6 @@
     font-display: swap;
 }
 
-
-
-
 @font-face {
     font-family: 'ABCM';
     src: url('assets/ABCMaristVariable-Trial.woff2') format('woff2'),
@@ -64,53 +60,38 @@
     font-style: normal;
     font-display: swap;
 }
-
-@font-face {
-    font-family: 'GraphicCAT';
-    src: url('assets/GraphicCAT.woff2') format('woff2'),
-        url('assets/GraphicCAT.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-
 body {
-/*  background-color: #000AFF;
-  color: white;*/
   color: #000AFF;
   padding: 0;
-  margin:0;
-  font-size:25px;
+  margin: 0;
+  font-size: 25px;
   font-family: "ABCM";
   font-weight: normal;
-  line-height:1.25;
+  line-height: 1.25;
   border: 9px solid;
   overflow-x: hidden;
 }
 
-
 p {
-    margin-bottom:-5px;
+    margin-bottom: -5px;
 }
 
 .author {
-  font-size:24px;
-  text-transform:uppercase;
-  letter-spacing:1px;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 span.small {
-    font-size:20px !important;
+    font-size: 20px !important;
 }
 
 canvas {
     max-width: 102%;
 }
 
-
 footer {
-    margin-top:100px;
+    margin-top: 100px;
     margin-bottom: -9px;
 }
 
@@ -120,38 +101,37 @@ footer {
 
 h1 {
   font-family: 'Herkules';
-  text-transform:uppercase;
+  text-transform: uppercase;
   font-weight: normal;
-  font-size: 24vh;
+  font-size: 24vh; /* Large font size for larger screens */
   letter-spacing: 2px;
-  line-height:1.1;
-  text-align:center;
+  line-height: 1.1;
+  text-align: center;
 }
 
 ::selection {
-    background: #F65800; /* Background color for selected text */
-    color: white; /* Text color for selected text */
+    background: #F65800;
+    color: white;
 }
 
 ::-moz-selection {
-    background: #F65800; /* Background color for selected text in Firefox */
-    color: white; /* Text color for selected text in Firefox */
+    background: #F65800;
+    color: white;
 }
 
 .grid-item {
-      margin-bottom: 50px;
-      max-width: 800px;
-/*      border-bottom: 10px dotted;*/
+    margin-bottom: 50px;
+    max-width: 800px;
 }
 
 .grid-container {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #header-text {
-  margin-top:50px;
+    margin-top: 50px;
 }
 
 main {
@@ -159,37 +139,46 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-  h1 {
-    font-size:10vh;
-    line-height:1.2;
-  }
+    h1 {
+        font-size: 10vh;
+        line-height: 1.2;
+    }
 
-  header {
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-  }
-
-  #sticky-header {
-/*    border-bottom:9px solid;*/
-    background-color:#000AFF !important;
-    color:white;
-  }
+    header {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 #sticky-header {
     position: sticky;
     top: 0;
-    background-color: #fff;
-    justify-content: space-between;
-/*    margin: 20px;*/  
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     z-index: 1000;
-    width: 100%;
-    margin-bottom:50px;
 }
 
-#sticky-header span {
-    padding:0 20px;
+#sticky-header .time-circle {
+    background-color: #000AFF;
+    color: white;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    text-align: center;
+}
+
+#california-time {
+    border-radius: 50% 40% 60% 40% / 40% 60% 40% 60%;
+}
+
+#nyc-time {
+    border-radius: 60% 50% 40% 50% / 50% 40% 60% 40%;
 }
