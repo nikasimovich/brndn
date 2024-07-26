@@ -58,6 +58,10 @@ p {
   letter-spacing:1px;
 }
 
+span.small {
+    font-size:20px !important;
+}
+
 canvas {
     max-width: 100%;
 }
