@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
             word.split('').forEach(letter => {
                 const letterSpan = document.createElement('span');
                 letterSpan.innerText = letter;
-                const randomOffset = Math.floor(Math.random() * 120) - 60; // Random offset between -60 and 60 pixels
+                const randomOffset = Math.floor(Math.random() * 80) - 40; // Random offset between -60 and 60 pixels
                 letterSpan.style.display = 'inline-block';
                 letterSpan.style.position = 'relative';
                 letterSpan.style.top = `${randomOffset}px`;

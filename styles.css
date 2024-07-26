@@ -8,6 +8,46 @@
 }
 
 @font-face {
+    font-family: 'CATReporter';
+    src: url('assets/CATReporter.woff2') format('woff2'),
+        url('assets/CATReporter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GraphicCAT';
+    src: url('assets/GraphicCAT.woff2') format('woff2'),
+        url('assets/GraphicCAT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Herkules';
+    src: url('assets/Herkules.woff2') format('woff2'),
+        url('assets/Herkules.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ketwurst';
+    src: url('assets/Ketwurst.woff2') format('woff2'),
+        url('assets/Ketwurst.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
     font-family: 'ABCM';
     src: url('assets/ABCMaristVariable-Trial.woff2') format('woff2'),
         url('assets/ABCMaristVariable-Trial.woff') format('woff');
@@ -45,7 +85,7 @@ body {
   font-family: "ABCM";
   font-weight: normal;
   line-height:1.25;
-  border: 8px solid;
+  border: 9px solid;
 }
 
 p {
@@ -76,12 +116,12 @@ footer {
 }
 
 h1 {
-  font-family: '10mal12Lampen';
+  font-family: 'Herkules';
   text-transform:uppercase;
   font-weight: normal;
-  font-size: 28vh;
+  font-size: 24vh;
   letter-spacing: 2px;
-  line-height:1;
+  line-height:1.1;
   text-align:center;
 }
 
