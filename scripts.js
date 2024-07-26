@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
             word.split('').forEach(letter => {
                 const letterSpan = document.createElement('span');
                 letterSpan.innerText = letter;
-                const randomOffset = Math.floor(Math.random() * 80) - 40; // Random offset between -60 and 60 pixels
+                const randomOffset = Math.floor(Math.random() * 80) - 40; // Random offset between -40 and 40 pixels
                 letterSpan.style.display = 'inline-block';
                 letterSpan.style.position = 'relative';
                 letterSpan.style.top = `${randomOffset}px`;
@@ -77,9 +77,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Apply text effect to header and footer
-    applyTextEffect('header-text');
-    applyTextEffect('footer-text');
+    // Check if the screen width is greater than 600px
+    if (window.innerWidth > 600) {
+        // Apply text effect to header and footer if screen width is greater than 600px
+        applyTextEffect('header-text');
+        applyTextEffect('footer-text');
+    }
 
     // Function to update time
     function updateTime() {
