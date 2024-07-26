@@ -158,7 +158,8 @@ main {
 
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size:19vh;
+    font-size:12vh;
+    line-height:1.2;
   }
 
   #sticky-header {
