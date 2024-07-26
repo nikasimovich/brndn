@@ -156,6 +156,16 @@ main {
     padding: 0 50px;
 }
 
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size:19vh;
+  }
+
+  #sticky-header {
+    border-bottom:9px solid;
+  }
+}
+
 #sticky-header {
     position: sticky;
     top: 0;
