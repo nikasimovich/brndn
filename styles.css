@@ -80,6 +80,10 @@ p {
 }
 
 
+.audio {
+    margin-top:100px;
+}
+
 .author {
   font-size: 26px;
   text-transform: uppercase;
