@@ -73,39 +73,4 @@ document.addEventListener("DOMContentLoaded", function() {
     // Update time every second
     setInterval(updateTime, 1000);
 
-// header animation
- const headerText = document.getElementById('header-text');
-    let animationFrameId;
-
-    // Function to animate the header text
-    function animateHeaderText() {
-        // Start from initial transform state
-        headerText.style.transform = 'scale(0.5) rotate(-25deg)';
-        headerText.style.transition = 'none';
-
-        // Allow time for the style to apply before starting the transition
-        setTimeout(() => {
-            // Use requestAnimationFrame for smoothness
-            animationFrameId = requestAnimationFrame(() => {
-                headerText.style.transition = 'transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
-                headerText.style.transform = 'scale(1.1) rotate(-25deg)';
-
-                // Reset the transform after the animation completes
-                setTimeout(() => {
-                    headerText.style.transform = 'scale(1) rotate(-25deg)';
-                }, 1000); // Duration of the animation
-            });
-        }, 100); // Short delay to ensure initial state is set
-    }
-
-    // Initial animation on page load
-    animateHeaderText();
-
-
-    // Clear animation frame if necessary
-    headerText.addEventListener('mouseleave', () => {
-        if (animationFrameId) {
-            cancelAnimationFrame(animationFrameId);
-        }
-    });
 });

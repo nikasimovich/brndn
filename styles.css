@@ -93,16 +93,21 @@ canvas {
 }
 
 footer {
+    background-color:yellow;
     margin-top: 100px;
     margin-bottom: -9px;
 }
 
 #footer-text {
     margin: 0;
+    color:yellow;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #000AFF;
 }
 
 header {
     overflow: hidden;
+    background-color:yellow !important;
     position: relative;
     z-index: 2;
     display: flex;
@@ -124,10 +129,11 @@ h1 {
     text-align: center;
     transform: rotate(-25deg);
     transform-origin: center;
-/*    animation: scaleUp 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;*/
+    animation: scaleUp 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
     margin: 0;
     min-width: 100%; /* Ensures the element doesn't shrink */
 }
+
 
 
 @keyframes scaleUp {
@@ -184,6 +190,8 @@ main {
     }
 }
 
+
+
 #sticky-header {
     position: sticky;
     top: 0;
@@ -199,8 +207,8 @@ main {
 
 
 #sticky-header .time-circle {
-    background-color: #000AFF;
-    color: white;
+
+/*    color: white;*/
     padding: 10px;
     width: 80px;
     height: 80px;
@@ -212,9 +220,13 @@ main {
 }
 
 #california-time {
+    background-color: #000AFF;
+    color:yellow;
     border-radius: 50% 40% 60% 40% / 40% 60% 40% 60%;
 }
 
 #nyc-time {
+    background-color: yellow;
+    color: #000AFF;
     border-radius: 60% 50% 40% 50% / 50% 40% 60% 40%;
 }
