@@ -72,5 +72,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Update time every second
     setInterval(updateTime, 1000);
-
 });

@@ -98,16 +98,27 @@ footer {
     margin-bottom: -9px;
 }
 
+h1 {
+    font-family: 'Herkules';
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 25vh; /* Ensure this is appropriate for your layout */
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-align:center;
+    transform: rotate(-25deg);
+    transform-origin: center;
+}
+
 #footer-text {
     margin: 0;
-    color:yellow;
+/*    color:yellow;
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #000AFF;
+    -webkit-text-stroke-color: #000AFF;*/
 }
 
 header {
     overflow: hidden;
-    background-color:yellow !important;
     position: relative;
     z-index: 2;
     display: flex;
@@ -116,23 +127,20 @@ header {
     height: 100vh; /* Or set a specific height */
     max-height: 100vh; /* Ensures it doesn't exceed viewport height */
     box-sizing: border-box;
+    position:fixed;
+    background-color:yellow;
+    animation: fade 2s 3s forwards, disappear 1s 4s forwards;
 }
 
 
-h1 {
-    font-family: 'Herkules';
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 25vh; /* Ensure this is appropriate for your layout */
-    letter-spacing: 2px;
-    line-height: 1.1;
+#header-text {
     text-align: center;
-    transform: rotate(-25deg);
-    transform-origin: center;
-    animation: scaleUp 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+    animation: scaleUp 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards, fade 3s 2s forwards;
     margin: 0;
     min-width: 100%; /* Ensures the element doesn't shrink */
 }
+
+
 
 
 
@@ -145,6 +153,25 @@ h1 {
     }
     100% {
         transform: scale(1) rotate(-25deg);
+    }
+}
+
+@keyframes disappear {
+    0% {
+        visibility:visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+
+@keyframes fade {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
