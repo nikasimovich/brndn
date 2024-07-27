@@ -106,7 +106,7 @@ h1 {
     font-weight: normal;
     font-size: 25vh; /* Ensure this is appropriate for your layout */
     letter-spacing: 2px;
-    line-height: 1.1;
+    line-height: .9;
     text-align:center;
     transform: rotate(-25deg);
     transform-origin: center;
