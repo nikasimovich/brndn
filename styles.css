@@ -168,6 +168,16 @@ header {
     }
 }
 
+@keyframes timeTurn {
+    0% {
+        transform:rotate(0);
+    }
+
+    100% {
+        transform:rotate(1turn);
+    }
+}
+
 
 @keyframes fade {
     0% {
@@ -180,8 +190,8 @@ header {
 
 
 ::selection {
-    background: #F65800;
-    color: white;
+    background: navy;
+    color: #000AFF;
 }
 
 ::-moz-selection {
@@ -237,8 +247,7 @@ main {
 
 
 #sticky-header .time-circle {
-
-/*    color: white;*/
+    /* color: white; */
     padding: 10px;
     width: 80px;
     height: 80px;
@@ -247,16 +256,34 @@ main {
     justify-content: center;
     font-size: 1em;
     text-align: center;
+   
 }
+
+
 
 #california-time {
     background-color: #000AFF;
-    color:yellow;
+    color: yellow;
     border-radius: 50% 40% 60% 40% / 40% 60% 40% 60%;
+    animation: timeTurn 20s linear infinite;
+    animation-play-state: running; /* Corrected from "playing" to "running" */
 }
 
-#nyc-time {
+#nyc-time
+ {
     background-color: yellow;
     color: #000AFF;
     border-radius: 60% 50% 40% 50% / 50% 40% 60% 40%;
+    animation: timeTurn 20s linear reverse infinite;
+    animation-play-state: running; /* Corrected from "playing" to "running" */
+}
+
+#nyc-time:hover {
+    animation-play-state: paused;
+    cursor:pointer;
+}
+
+#california-time:hover {
+    animation-play-state: paused;
+    cursor:pointer;
 }
